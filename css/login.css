@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 31px;
+    font-family: 'Lexend Deca';
+    width: 40%;
+}
+h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    color: #224957;
+}
+p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #224957;
+}
+input {
+    margin-top: 10px;
+    width: 300px;
+    height: 45px;
+}

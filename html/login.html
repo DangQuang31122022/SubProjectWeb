@@ -14,19 +14,20 @@
             <h1>Sign in</h1>
             <p> Sign in and start managing your candidates!</p>
             <form action="login.php" method="post">
-                <input type="text" name="username" placeholder="Username"> <br>
-                <input type="password" name="password" placeholder="Password">
-                <div class="checkboxRow">
-                    <div class="row1">
-                        <input type="checkbox" name="remember" id="">
-                        <span>Remember me</span>
-                    </div>
+                <div class="fill-in">
+                    <input type="text" name="username">
+                    <label>Username</label>
                 </div>
-                <div class="checkboxRow">
-                    <div class="row2">
-                        <input type="checkbox" name="forgot" id="">
-                        <span>Forgot password</span>
+                <div class="fill-in">
+                    <input type="password" name="password">
+                    <label>Password</label>
+                </div>
+                <div class="checkbox">
+                    <div class="checkbox-remember">
+                        <input type="checkbox" name="remember" id="c1">
+                        <label>Remember me</label>
                     </div>
+                    <label>Forgot password?</label>
                 </div>
                 <input type="submit" name="submit" value="Login">
             </form>

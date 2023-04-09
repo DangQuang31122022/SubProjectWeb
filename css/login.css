@@ -1,30 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca';
+    height: 100vh; /* chiều cao của body bằng chiều cao của màn hình */
+}
 .form {
+    position: absolute;
+    /* bắt đầu tại vị trí giữa phần tử cha */
+    top: 50%;
+    left: 50%;
+    /* dịch chuyển để nó nằm giữa phần tử cha */
+    transform: translate(-50%, -50%);
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
-    gap: 31px;
-    font-family: 'Lexend Deca';
-    width: 40%;
+}
+form {
+    width: 90%;
 }
 h1 {
-    font-style: normal;
+    padding-bottom: 15px;
     font-weight: 400;
     font-size: 64px;
-    line-height: 80px;
-    text-align: center;
     color: #224957;
+    margin:  0;
+    text-align: center;
 }
 p {
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 20px;
     text-align: center;
     color: #224957;
+    font-weight: 520;
 }
-input {
-    margin-top: 10px;
-    width: 300px;
-    height: 45px;
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: #224957;
+    border-radius: 10px;
+    margin: 8px 0px;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+.fill-in {
+    position: relative;
+}
+.fill-in label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #fff;
+    transform: translateY(-50%); /* dịch chuyển label về giữa theo chiều đứng*/
+}
+input[type="checkbox"]:checked {
+    background-color: #224957;
+}
+.checkbox {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.checkbox-remember {
+    display: flex;
+    align-items: center;
+}
+.checkbox-remember  label {
+    color: #224957;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: #20DF7F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 8px 0;
+    border: none;
+    outline: none;
+    color: #224957;
+    cursor: pointer;
 }

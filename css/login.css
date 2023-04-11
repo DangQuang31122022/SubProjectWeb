@@ -35,7 +35,8 @@ p {
 }
 input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 10px 0;
+    box-sizing: border-box;
+    padding: 10px 10px;
     font-size: 16px;
     background-color: #224957;
     border-radius: 10px;

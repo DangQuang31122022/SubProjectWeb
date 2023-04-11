@@ -1,0 +1,19 @@
+h3{
+    color: rgb(159, 137, 170);
+}
+h1{
+    font-size: 200px;
+    margin-bottom: 20px;
+}
+
+.all{
+    color: rgb(24, 60, 24);
+    text-align: center;
+    height: 100%;
+    width: auto;
+    
+}
+.footer{
+    font-size: 20px;
+    margin-top: 50px;
+}

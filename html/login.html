@@ -5,26 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src=""></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery-3.6.4.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <!-- login -->
     <script>
         // xử lí login từ button
-        
+        $(document).ready(function () {
+            // hàm check login
+            function checkLogin() {
+                var user = $("#user").val();
+                var pass = $("#pass").val();
+                var userParttern = /^admin/;
+                var passParttern = /^123/;
+                if (userParttern.test(user) && passParttern.test(pass)) {
+                    return true;
+                }
+                return false;
+            }
+            // xử lí sự kiện click button
+            $(".button").click(function (e) { 
+                e.preventDefault();
+                if (checkLogin()) {
+                    window.location.href = "homepage.html";
+                } else {
+                    alert("Sai tài khoản hoặc mật khẩu");
+                }
+            });
+        });
     </script>
-    <div class="login">
-        <div class="form">
+    <div class="wrapper">
+        <div class="login">
             <h1>Sign in</h1>
             <p> Sign in and start managing your candidates!</p>
             <form action="" method="">
                 <div class="fill-in">
-                    <input type="text" name="username" placeholder="username">
-                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Username" id="user">
                 </div>
                 <div class="fill-in">
-                    <input type="password" name="password">
-                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Password" id="pass">
                 </div> 
                 <div class="checkbox">
                     <div class="checkbox-remember">
@@ -33,9 +56,9 @@
                     </div>
                     <label>Forgot password?</label>
                 </div>
-                <input type="submit" name="submit" value="Login">
-                <a href="homepage.html">llll</a>
+                <button class="button"><a href="homepage.html">Login</a></button>
             </form>
+            
         </div>
     </div>
 </body>

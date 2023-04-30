@@ -4,7 +4,7 @@ body {
     font-family: 'Lexend Deca';
     height: 100vh; /* chiều cao của body bằng chiều cao của màn hình */
 }
-.form {
+.login {
     position: absolute;
     /* bắt đầu tại vị trí giữa phần tử cha */
     top: 50%;
@@ -20,8 +20,8 @@ form {
     width: 90%;
 }
 h1 {
-    padding-bottom: 15px;
-    font-weight: 400;
+    padding-bottom: 1rem;
+    font-weight: 700;
     font-size: 64px;
     color: #224957;
     margin:  0;
@@ -45,16 +45,15 @@ input[type="text"], input[type="password"] {
     outline: none;
     color: #fff;
 }
-.fill-in {
-    position: relative;
-}
-.fill-in label {
+
+/*
+ .fill-in label {
     position: absolute;
     top: 50%;
     left: 10px;
     color: #fff;
-    transform: translateY(-50%); /* dịch chuyển label về giữa theo chiều đứng*/
-}
+    transform: translateY(-50%); /* dịch chuyển label về giữa theo chiều đứng*/ 
+
 input[type="checkbox"]:checked {
     background-color: #224957;
 }
@@ -72,7 +71,7 @@ input[type="checkbox"]:checked {
 .checkbox-remember  label {
     color: #224957;
 }
-input[type="submit"] {
+.button {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -84,4 +83,11 @@ input[type="submit"] {
     outline: none;
     color: #224957;
     cursor: pointer;
+}
+::placeholder {
+    color: #fff;
+}
+.button > a {
+    text-decoration: none;
+    color: #224957;
 }

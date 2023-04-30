@@ -8,15 +8,17 @@
     
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../bootstrap/jquery/jquery-3.6.4.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../css/homepage.css">
+    <script src="../js/data.js"></script>
+    <script src="../js/functionsHandle.js"></script>
 </head>
 <body>
-    <div class="main">
+    <div class="wrapper">
         <!-- HEADER -->
         <nav class="navbar fixed-top">
-            <div class="wrapper">
+            <div class="container">
                 <div class="navleft">
                     <a class="navbar-brand" href="homepage.html"><h3>Trang chủ</h3></a>
                     <ul class="navbar-nav">
@@ -39,171 +41,39 @@
                         <button class="nav-link button"><i class="fa-solid fa-shopping-cart"></i> Basket</button>
                     </li>
                 </ul>
+                <!-- dropdown menu for navright-->
+                <div class="dropdown dropstart">
+                    <button class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-bars"></i>
+                            </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./page404.html">Search</a></li>
+                        <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="./purchase.html">Basket</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <!-- MAIN -->
-        <div class="content">
-            <div class="content__header">
-                <div class="content__header-text">
+        <div class="container-fluid">
+            <div class="content-header">
+                <div class="col-6 content-header-text">
                     <h1>New Releases This Week</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi beatae dolore eius reprehenderit architecto atque dicta natus placeat, voluptatibus vitae veniam autem, iste ipsam voluptate facilis eaque fugiat quidem ipsum?</p>
-                    <button class="button">Shop Now</button>
+                    <button class="button" onclick="location.href='./purchase.html'">Shop Now</button>
                 </div>
-                <div class="content__header-image">
+                <div class="col-6 content-header-image">
                     <img src="../picture/watch.png" alt="">
                 </div>
             </div>
-            <div class="content__topSeller">
-                <div class="content__topSeller-title">
-                    <h1>Top Seller</h1>
-                </div>
-                <div class="content__topSeller-product">
-                    <div class="content__topSeller-product-item">
-                        <div class="content__image">
-                            <img src="../picture/hinh_1_1.jpg" alt="">
-                        </div>
-                        <div class="content__topSeller-product-item-text">
-                            <h3>Product Name</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                            <p>$100</p>
-                            <button class="button">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__topSeller-product-item">
-                        <div class="content__image">
-                            <img src="../picture/hinh_10_1.jpg" alt="">
-                        </div>
-                        <div class="content__topSeller-product-item-text">
-                            <h3>Product Name</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                            <p>$100</p>
-                            <button class="button">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__topSeller-product-item">
-                        <div class="content__image">
-                            <img src="../picture/hinh_2_1.jpg" alt="">
-                        </div>
-                        <div class="content__topSeller-product-item-text">
-                            <h3>Product Name</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                            <p>$100</p>
-                            <button class="button">Add to basket</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="name">
+                <p class="name-product">Top seller</p>
             </div>
-            <div class="content__recommand">
-                <div class="content__recommand-title">
-                    <h2>Recommand For You</h2>
-                </div>
-                <div class="content__recommand-product">
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_3_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_4_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_5_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_6_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_7_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_8_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_9_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="content__recommand-product-item">
-                        <div class="content__recommand-product-item-image content__image">
-                            <img src="../picture/hinh_10_1.jpg" alt="">
-                        </div>
-                        <div class="content__recommand-product-item-text">
-                            <div class="content__recommand-product-item-text-paragraph">
-                                <h3>Product Name</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                                <p>$100</p>
-                            </div>
-                            <button class="button button-recommand">Add to basket</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="row-seller"></div>
+            <div class="name">
+                <p class="name-product">Recommand for you</p>
             </div>
+            <div class="row" id="row-recommand"></div>
         </div>
         <!-- FOOTER -->
         <footer class="footer">
@@ -257,5 +127,8 @@
             </nav>
         </footer>
     </div>
+    <script>
+        renderMainPage();
+    </script>
 </body>
 </html>

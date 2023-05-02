@@ -192,7 +192,6 @@ li > form {
     }
     .dropdown {
         display: block;
-        /* background-color: #224957; */
     }
 
     /* main */
@@ -200,9 +199,7 @@ li > form {
         flex-direction: column;
         margin: auto 0;
     }
-    .content-header-image {
-        background-size: cover;
-    }
+    
     /* footer */
     .footer__above, .footer__under {
         flex-direction: column;

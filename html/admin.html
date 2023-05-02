@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin: quản lí thanh toán</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery-3.6.4.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/data.js"></script>
+    <script src="../js/functionsHandle.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- HEADER -->
+        <nav class="navbar sticky-top">
+            <div class="container">
+                <div class="navleft">
+                    <a class="navbar-brand" href="homepage.html"><h3>Trang chủ</h3></a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <form action="" class="searchform">
+                                <button class="nav-link" id="searchid"><i class="fas fa-search"></i></button>
+                                <input class="form-control" id="textid" type="text" placeholder="Tìm kiếm">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav navright">
+                    <li class="nav-item">
+                        <button class="nav-link" onclick="location.href='./admin.html'"><i class="fa-solid fa-chalkboard"></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" onclick="toLogin()"><i class="fa-solid fa-user"></i></button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="nav-link"><i class="fa-regular fa-heart"></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link button" onclick="toGH()"><i class="fa-solid fa-shopping-cart"></i> Basket</button>
+                    </li>
+                </ul>
+                <!-- dropdown menu for navright-->
+                <div class="dropdown dropstart">
+                    <button class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-bars"></i>
+                            </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./page404.html">Search</a></li>
+                        <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="./purchase.html">Basket</a></li>
+                        <li><a class="dropdown-item" href="./admin.html">Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- MAIN -->
+        <div class="container-fluid">
+            <div class="header">
+                <div class="header-title">
+                    <h2>Dashboard</h2>
+                    <span>Payment</span>
+                </div>
+                <div class="header-search">
+                    <input type="search" class="form-control" placeholder="search">
+                </div>
+            </div>
+            <div class="main">
+                <div class="card-board">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <span>Transfer via card</span>
+                        <h5>$300</h5>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-sharp fa-solid fa-sack-dollar"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <span>Transfer cash</span>
+                        <h5>$500</h5>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-sharp fa-solid fa-building-columns"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <span>Transfer banks</span>
+                        <h5>$700</h5>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-brands fa-paypal"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <span>Transfer papal</span>
+                        <h5>$900</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="header">
+                <div class="header-title">
+                    <h2>Balance</h2>
+                    <span>$6.000.000</span>
+                </div>
+            </div>
+            <!-- Bảng xem thông tin thanh toán của khách hàng-->
+            <div class="balance">
+                <div class="balance-details">
+                    <ul class="details">
+                        <li class="topic">Date</li>
+                        <li><a href="#">01 - 04 - 2023</a></li>
+                        <li><a href="#">02 - 04 - 2023</a></li>
+                        <li><a href="#">03 - 04 - 2023</a></li>
+                        <li><a href="#">04 - 04 - 2023</a></li>
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Name</li>
+                        <li><a href="#">William Carter</a></li>
+                        <li><a href="#">Christopher Jones</a></li>
+                        <li><a href="#">Matthew Lee</a></li>
+                        <li><a href="#">Jacob Williams</a></li>
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Status</li>
+                        <li><a href="#">done</a></li>
+                        <li><a href="#">done</a></li>
+                        <li><a href="#">pending</a></li>
+                        <li><a href="#">done</a></li>
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Total</li>
+                        <li><a href="#">$1000</a></li>
+                        <li><a href="#">$2000</a></li>
+                        <li><a href="#">$3000</a></li>
+                        <li><a href="#">$4000</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__above">
+                <div class="footer__above-text">
+                    <p>©Copyright by Someone
+                        <br>Hotline: +84 999999999
+                        <br>Đại học Công nghiệp, 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Tp HCM.  
+                    </p>
+                </div>
+                <div class="footer__above-purchase">
+                    <h4>Thanh toán</h4>
+                    <img src="../picture/thanhtoan.png" alt="">
+                </div>
+                <div class="footer__above-subscribe">
+                    <p>
+                        Subscribe to stay tuned for new product and latest updates. <br>
+                        Let's do it!
+                    </p>
+                    <form action="">
+                        <div class="input-group">
+                          <input class="form-control" type="text" placeholder="Enter your email address">
+                          <div class="input-group-append">
+                            <button class="button-surscribe" type="submit">Subscribe</button>
+                          </div>
+                        </div>
+                    </form>
+                      
+                </div>
+            </div>
+            <nav class="footer__under">
+                <ul class="footer__under-left">
+                    <li>
+                        <span>Privacy</span>
+                    </li>
+                    <li>
+                        <span>Terms of use</span>
+                    </li>
+                    <li>
+                        <span>Sales and refunds</span>
+                    </li>
+                    <li>
+                        <span>Legal</span>
+                    </li>
+                </ul>
+                <ul class="footer__under-right">
+                    <li><img src="../picture/facebook.png" alt=""></li>
+                    <li><img src="../picture/instagram.png" alt=""></li>
+                    <li><img src="../picture/youtube.png" alt=""></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    
+
+</body>
+</html>

@@ -8,259 +8,161 @@
     
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../bootstrap/jquery/jquery-3.6.4.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../bootstrap/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/homepage.css">
     <link rel="stylesheet" href="../css/productinfo.css">
+    <script src="../js/data.js"></script>
+    <script src="../js/functionsHandle.js"></script>
 </head>
 <body>
-    <div class="main">
-        <!-- HEADER -->
-        <nav class="navbar fixed-top">
-            <div class="wrapper">
-                <div class="navleft">
-                    <a class="navbar-brand" href="homepage.html"><h3>Trang chủ</h3></a>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <form action="">
-                                <button class="nav-link" id="searchid"><i class="fas fa-search"></i></button>
-                                <input class="form-control" id="textid" type="text" placeholder="Tìm kiếm">
-                            </form>
-                        </li>
-                    </ul>
-                </div>
+    <div class="wrapper">
+    <!-- HEADER -->
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <div class="navleft">
+                <a class="navbar-brand" href="homepage.html"><h3>Trang chủ</h3></a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button class="nav-link"><i class="fa-solid fa-user"></i></button>
-                    </li>
-                    <li class="navbar-item">
-                        <button class="nav-link"><i class="fa-regular fa-heart"></i></button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link button"><i class="fa-solid fa-shopping-cart"></i> Basket</button>
+                        <form action="" class="searchform">
+                            <button class="nav-link" id="searchid"><i class="fas fa-search"></i></button>
+                            <input class="form-control" id="textid" type="text" placeholder="Tìm kiếm">
+                        </form>
                     </li>
                 </ul>
             </div>
-        </nav>
-        <!-- MAIN -->
-        <section class="product">
-            <div class="container">
-              <div class="row">
-                <div class="col-6">
-                  <img style="width: 100%;" src="../picture/hinh_78_2.jpg" alt="" />
-                </div>
-                <div class="col-6">
-                  <div class="infor">
-                    <div class="title">
-                      <h1>
-                        CASIO MW-240 - 7EVDF - NAM - KÍNH NHỰA-QUARTZ (PIN) - DÂY CAO
-                        SU - MẶT SỐ 43MM
-                      </h1>
-                    </div>
-      
-                    <div class="detail">
-                      <p>900.000d</p>
-                      <span>Mã số sản phẩm: MW-240-7EVDF</span>
-                      <div><br /><br /></div>
-                      <span
-                        >Casio MW-240-7EVDF thiết kế giản dị 3 kim kết hợp phong cách
-                        thể thao phần dây vỏ nhựa, vạch số tạo hình mỏng trẻ trung
-                        trên mặt số size 43mm.</span
-                      >
-                    </div>
-                    <div><br /><br /></div>
-                    <div class="arrow row">
-                      <button class="left"></button>
-                      <div class="num">5</div>
-                      <button class="right"></button>
-                    </div>
-                    <div><br /><br /></div>
-                    <button class="add">Thêm vào giỏ hàng</button>
-                  </div>
-                </div>
-              </div>
+            <ul class="navbar-nav navright">
+                <li class="nav-item">
+                    <button class="nav-link" onclick="location.href='./admin.html'"><i class="fa-solid fa-chalkboard"></i></button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="toLogin()"><i class="fa-solid fa-user"></i></button>
+                </li>
+                <li class="navbar-item">
+                    <button class="nav-link"><i class="fa-regular fa-heart"></i></button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link button" onclick="toGH()"><i class="fa-solid fa-shopping-cart"></i> Basket</button>
+                </li>
+            </ul>
+            <!-- dropdown menu for navright-->
+            <div class="dropdown dropstart">
+                <button class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-bars"></i>
+                        </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./page404.html">Search</a></li>
+                    <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="./purchase.html">Basket</a></li>
+                    <li><a class="dropdown-item" href="./admin.html">Admin</a></li>
+                </ul>
             </div>
-          </section>
-      
-          <section class="tb">
-            <div class="container">
-              <table class="table table-striped">
-                <tbody>
-                  <tr>
-                    <th scope="row">Số Hiệu Sản Phẩm</th>
-                    <td></td>
-                    <td></td>
-                    <td>MW-240-7EVDF</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Xuất Xứ</th>
-                    <td></td>
-                    <td></td>
-                    <td>Nhật Bản</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Giới Tính</th>
-                    <td></td>
-                    <td></td>
-                    <td>Nam</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Kính</th>
-                    <td></td>
-                    <td></td>
-                    <td>Resin Glass (Kính Nhựa)</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Máy</th>
-                    <td></td>
-                    <td></td>
-                    <td>Quartz (Pin)</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Bảo Hành Quốc Tế</th>
-                    <td></td>
-                    <td></td>
-                    <td>1 Năm</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Bảo Hành Tại Hải Triều</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Đường Kính Mặt Số</th>
-                    <td></td>
-                    <td></td>
-                    <td>43.6mm</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Bề Dày Mặt Số</th>
-                    <td></td>
-                    <td></td>
-                    <td>10.3mm</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Niềng</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Dây Đeo</th>
-                    <td></td>
-                    <td></td>
-                    <td>Dây Cao Su</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Màu Mặt Số</th>
-                    <td></td>
-                    <td></td>
-                    <td>Đen</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Chống Nước</th>
-                    <td></td>
-                    <td></td>
-                    <td>5 ATM</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Chức Năng</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-      
-          <section class="more">
-            <div class="container">
-              <div class="title"><p>Các sản phẩm tương tự</p></div>
-              <br /><br />
-              <div class="row">
-                <div class="col-4">
-                  <div class="item">
-                    <img src="../picture/hinh_12_1.jpg" alt="" />
-                    <br />
-                    <span>CASIO MW-240 - 7EVDF - NAM - KÍNH NHỰA...</span>
-                    <br />
-                    <span>500.000d</span>
-                  </div>
+        </div>
+    </nav>
+    <!-- MAIN -->
+    <div class="container-fluid">
+        <div class="product">
+            <div class="product-name-img">
+                <div class="product-img">
+                    
                 </div>
-                <div class="col-4">
-                  <div class="item">
-                    <img src="../picture/hinh_12_1.jpg" alt="" />
-                    <br />
-                    <span>CASIO MW-240 - 7EVDF - NAM - KÍNH NHỰA...</span>
-                    <br />
-                    <span>500.000d</span>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="item">
-                    <img src="../picture/hinh_12_1.jpg" alt="" />
-                    <br />
-                    <span>CASIO MW-240 - 7EVDF - NAM - KÍNH NHỰA...</span>
-                    <br />
-                    <span>500.000d</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div><br /><br /></div>
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="footer__above">
-                <div class="footer__above-text">
-                    <p>©Copyright by Someone
-                        <br>Hotline: +84 999999999
-                        <br>Đại học Công nghiệp, 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Tp HCM.  
-                    </p>
-                </div>
-                <div class="footer__above-purchase">
-                    <h4>Thanh toán</h4>
-                    <img src="../picture/thanhtoan.png" alt="">
-                </div>
-                <div class="footer__above-subscribe">
-                    <p>
-                        Subscribe to stay tuned for new product and latest updates. <br>
-                        Let's do it!
-                    </p>
-                    <form action="">
-                        <div class="input-group">
-                          <input class="form-control" type="text" placeholder="Enter your email address">
-                          <div class="input-group-append">
-                            <button class="button-surscribe" type="submit">Subscribe</button>
-                          </div>
-                        </div>
+                <div class="product-name" >
+                    <p id="path"></p>
+                    <hr>
+                    <p id="product-name-title"></p>
+                    <p id="product-name-price"></p>
+                    <hr>
+                    <p id="masp"></p>
+                    <p id="product-name-discriptions"></p>
+                    <hr>
+                    <form class="order">
+                        <input type="button" value="-" id="down" onclick="changeValueGH(-1)">
+                        <input type="text" value="1" id="soluong" >
+                        <input type="button" value="+" id="up" onclick="changeValueGH(1)">
+                        <br/>
+                        <input type="button" value="Thêm vào giỏ" id="themGioHang">
                     </form>
-                      
                 </div>
             </div>
-            <nav class="footer__under">
-                <ul class="footer__under-left">
-                    <li>
-                        <span>Privacy</span>
-                    </li>
-                    <li>
-                        <span>Terms of use</span>
-                    </li>
-                    <li>
-                        <span>Sales and refunds</span>
-                    </li>
-                    <li>
-                        <span>Legal</span>
-                    </li>
-                </ul>
-                <ul class="footer__under-right">
-                    <li><img src="../picture/facebook.png" alt=""></li>
-                    <li><img src="../picture/instagram.png" alt=""></li>
-                    <li><img src="../picture/youtube.png" alt=""></li>
-                </ul>
-            </nav>
-        </footer>
+            <table class="product-attributes table table-striped" id="attributes"></table>
+                
+            
+        </div>
     </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__above">
+            <div class="footer__above-text">
+                <p>©Copyright by Someone
+                    <br>Hotline: +84 999999999
+                    <br>Đại học Công nghiệp, 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Tp HCM.  
+                </p>
+            </div>
+            <div class="footer__above-purchase">
+                <h4>Thanh toán</h4>
+                <img src="../picture/thanhtoan.png" alt="">
+            </div>
+            <div class="footer__above-subscribe">
+                <p>
+                    Subscribe to stay tuned for new product and latest updates. <br>
+                    Let's do it!
+                </p>
+                <form action="">
+                    <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Enter your email address">
+                    <div class="input-group-append">
+                        <button class="button-surscribe" type="submit">Subscribe</button>
+                    </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        <nav class="footer__under">
+            <ul class="footer__under-left">
+                <li>
+                    <span>Privacy</span>
+                </li>
+                <li>
+                    <span>Terms of use</span>
+                </li>
+                <li>
+                    <span>Sales and refunds</span>
+                </li>
+                <li>
+                    <span>Legal</span>
+                </li>
+            </ul>
+            <ul class="footer__under-right">
+                <li><img src="../picture/facebook.png" alt=""></li>
+                <li><img src="../picture/instagram.png" alt=""></li>
+                <li><img src="../picture/youtube.png" alt=""></li>
+            </ul>
+        </nav>
+    </footer>
+    </div>
+    <script>
+        var id = localStorage.getItem('id'); // lấy id từ localstorage ở hàm hienthi() bên homepage
+        var product = data[id]; // Lấy sản phẩm từ data list
+        var str= ""; // Chuỗi để lưu thông tin chi tiết sản phẩm
+        // show ảnh
+        document.getElementsByClassName('product-img')[0].innerHTML = '<div class="mySlides"><img src="../picture/data_picture/'+ product.picture[0] +'" class="show-picture" > </div>';
+        // show thông tin cơ bản
+        document.getElementById('product-name-title').innerHTML = product.name;
+        document.getElementById('product-name-price').innerHTML = '<i>'+ Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(product.price * 1000) + '</i>';
+        document.getElementById('product-name-discriptions').innerHTML =  product.discriptions ;
+        document.getElementById('masp').innerHTML= 'Mã số sản phẩm: ' + product.informations_data[1];
+        // Lấy thông tin chi tiết sản phẩm
+        for( var i = 0 ; i < product.informations_name.length ; i++){
+            str += '<tr> <th>'+ product.informations_name[i] + '</th> <td> ' + product.informations_data[i] + '</td></tr>';
+        }
+        document.getElementById('attributes').innerHTML = str;
+        // Xử lí tăng giảm số lượng sản phẩm cần mua
+        function changeValueGH(x){
+                var n = document.getElementById('soluong').value;
+                if(!(parseInt(n)==1 && x==-1)) // Nếu số lượng = 1 và giảm thì không cho giảm nữa
+                    document.getElementById('soluong').value = parseInt(n) + x ;
+        }
+    </script>
 </body>
 </html>

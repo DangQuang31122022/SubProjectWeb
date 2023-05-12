@@ -181,7 +181,7 @@ li > form {
 .dropdown {
     display: none;
 }
-/* Reponsive khi width < 768px */
+/* Reponsive khi width < 1200px */
 @media (max-width: 1200px) {
     /* header */
     .navright {
